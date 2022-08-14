@@ -4,6 +4,7 @@ import dev.trodrigues.springsecurity.api.responses.UserResponse
 import dev.trodrigues.springsecurity.api.responses.toResponse
 import dev.trodrigues.springsecurity.domain.entities.User
 import dev.trodrigues.springsecurity.domain.services.UserService
+import dev.trodrigues.springsecurity.infra.security.authorizations.AdminCanOnlyAccess
 import dev.trodrigues.springsecurity.infra.security.authorizations.UserCanOnlyAccessTheirOwnResource
 import org.springframework.web.bind.annotation.*
 import java.util.*
@@ -14,6 +15,7 @@ class UserController(
     private val userService: UserService
 ) {
 
+    @AdminCanOnlyAccess
     @GetMapping
     fun getUsers(): List<UserResponse> {
         return userService.findAll().map { it.toResponse() }
