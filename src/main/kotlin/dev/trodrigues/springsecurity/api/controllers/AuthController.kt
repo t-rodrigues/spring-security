@@ -1,6 +1,6 @@
 package dev.trodrigues.springsecurity.api.controllers
 
-import dev.trodrigues.springsecurity.api.controllers.requests.AuthRequest
+import dev.trodrigues.springsecurity.api.requests.AuthRequest
 import dev.trodrigues.springsecurity.infra.security.AuthService
 import dev.trodrigues.springsecurity.infra.security.TokenDto
 import org.springframework.web.bind.annotation.PostMapping
@@ -15,7 +15,5 @@ class AuthController(
 ) {
 
     @PostMapping("/login")
-    fun authenticate(@RequestBody authRequest: AuthRequest): TokenDto {
-        return authService.signIn(authRequest)
-    }
+    fun authenticate(@RequestBody authRequest: AuthRequest): TokenDto = authService.signIn(authRequest)
 }

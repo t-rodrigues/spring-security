@@ -1,6 +1,6 @@
 package dev.trodrigues.springsecurity.infra.security
 
-import dev.trodrigues.springsecurity.api.controllers.requests.AuthRequest
+import dev.trodrigues.springsecurity.api.requests.AuthRequest
 
 interface AuthService {
 

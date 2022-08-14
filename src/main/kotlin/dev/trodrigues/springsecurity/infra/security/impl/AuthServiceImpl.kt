@@ -1,6 +1,6 @@
 package dev.trodrigues.springsecurity.infra.security.impl
 
-import dev.trodrigues.springsecurity.api.controllers.requests.AuthRequest
+import dev.trodrigues.springsecurity.api.requests.AuthRequest
 import dev.trodrigues.springsecurity.infra.security.AuthService
 import dev.trodrigues.springsecurity.infra.security.TokenDto
 import dev.trodrigues.springsecurity.infra.security.TokenProvider
