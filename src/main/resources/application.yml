@@ -1,3 +1,8 @@
+app:
+  jwt:
+    secret-key: ${JWT_SECRET_KEY:SuperSecret123}
+    expires-in: ${JWT_EXPIRES_IN:3600000}
+
 spring:
   application:
     name: spring-security

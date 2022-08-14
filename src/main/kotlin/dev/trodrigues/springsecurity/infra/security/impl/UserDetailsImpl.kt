@@ -1,11 +1,11 @@
-package dev.trodrigues.springsecurity.infra.security
+package dev.trodrigues.springsecurity.infra.security.impl
 
 import dev.trodrigues.springsecurity.domain.entities.User
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 
-class CustomUserDetails(private val user: User) : UserDetails {
+class UserDetailsImpl(private val user: User) : UserDetails {
 
     val id = user.id!!
 
