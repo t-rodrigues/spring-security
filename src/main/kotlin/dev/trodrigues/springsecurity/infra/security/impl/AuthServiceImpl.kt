@@ -2,8 +2,8 @@ package dev.trodrigues.springsecurity.infra.security.impl
 
 import dev.trodrigues.springsecurity.api.requests.AuthRequest
 import dev.trodrigues.springsecurity.infra.security.AuthService
-import dev.trodrigues.springsecurity.infra.security.TokenDto
 import dev.trodrigues.springsecurity.infra.security.TokenProvider
+import dev.trodrigues.springsecurity.infra.security.dtos.TokenDto
 import dev.trodrigues.springsecurity.infra.security.exceptions.AuthenticationException
 import org.springframework.security.authentication.AuthenticationManager
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken

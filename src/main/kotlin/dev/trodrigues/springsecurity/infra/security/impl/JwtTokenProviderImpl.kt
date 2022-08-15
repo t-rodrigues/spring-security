@@ -2,8 +2,8 @@ package dev.trodrigues.springsecurity.infra.security.impl
 
 import com.auth0.jwt.JWT
 import com.auth0.jwt.algorithms.Algorithm
-import dev.trodrigues.springsecurity.infra.security.TokenDto
 import dev.trodrigues.springsecurity.infra.security.TokenProvider
+import dev.trodrigues.springsecurity.infra.security.dtos.TokenDto
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Component
 import java.time.Instant

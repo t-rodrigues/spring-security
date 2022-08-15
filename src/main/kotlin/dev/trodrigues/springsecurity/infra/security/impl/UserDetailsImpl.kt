@@ -9,8 +9,8 @@ class UserDetailsImpl(private val user: User) : UserDetails {
 
     val id = user.id!!
 
-    override fun getAuthorities(): MutableCollection<out GrantedAuthority> =
-        user.roles.map { SimpleGrantedAuthority(it.authority) }.toMutableSet()
+    override fun getAuthorities(): Collection<GrantedAuthority> =
+        user.roles.map { SimpleGrantedAuthority(it.authority) }.toSet()
 
     override fun getPassword(): String = user.password
 
